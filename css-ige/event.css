@@ -1,0 +1,914 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0e2c5b1c;
+}
+.heading{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    -webkit-box-shadow: 0px 3px 50px -10px rgba(51,51,51,0.4); 
+    box-shadow: 0px 3px 50px -10px rgba(51,51,51,0.4);
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+.logo{
+    width: 170px;
+}
+.nav-bar{
+    display: flex;
+    width: 56%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar a{
+list-style: none;
+transition: 0.3s;
+padding: 14px 20px;
+text-decoration: none;
+margin: 10px;
+color:#333;
+font-size: 1em; 
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+transition: 0.3s;
+}
+.nav-bar a:hover{
+    background:#333;
+    border-radius:40px;
+    color:white;
+}
+.menu{
+    transform: scale(1.3);
+    position: absolute;
+    top: 35%;
+    right: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+.nav_responsive{
+    position: absolute;
+    left: 0;
+    top: -25%;
+    width: 100%;
+    height:25%;
+    background-color:rgba(30, 31, 41, 0.88);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: top .6s linear;
+}
+.nav_responsive a{
+    text-decoration: none;
+    color: aliceblue;
+    border-bottom: solid 2px rgb(171, 171, 177);
+    height: 25px;
+    font-size: 1.1em;
+}
+.nav_responsive a:focus {
+    color: rgb(0, 99, 247);
+}
+.show_nav_responsive{
+    top:0;
+}
+@media(max-width:750px){
+    .menu{
+        opacity: 1;
+    }
+    .heading{
+        height: 60px;
+        padding: 0 20px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .nav-bar{
+         display: none;        
+    }
+}
+@media screen and (min-width: 751px) and (max-width: 990px){
+    .heading{
+        width: 100%;
+        height: 60px;
+        padding: 0 20px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .nav-bar{
+        width: 75%;        
+    }
+    .nav-bar a{
+    list-style: none;
+    transition: 0.3s;
+    padding: 14px 10px ;
+    text-decoration: none;
+    color:#333;
+    font-size: .9em; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+    }
+}
+@media screen and (min-width: 991px) and (max-width:1334px){
+    .heading{
+        padding: 0 30px;
+    }
+    .nav-bar{
+        width: 60%;
+    }
+    .nav-bar a{
+    padding: 14px 10px;
+    }
+}
+main {
+    font-family: "Kumbh Sans", sans-serif;
+    padding: 10px;
+    background: #e2e1e0;
+    position: relative;
+    overflow: hidden;
+}
+  main > h1 {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: lighter;
+    position: relative;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.89);
+    background-color: rgb(3, 42, 116);
+    box-shadow: 0px 0px 20px 3px #333;
+    margin: 50px auto;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  main .m-one {
+    width: 74%;
+    margin: 10px 13%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+  }
+  main .m-one .image {
+    width: 100%;
+  }
+  main .m-one .image img {
+    width: 100%;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+  main .m-one .text {
+    margin: 40px 90px 35px 0px;
+  }
+  main .m-one .text h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  /*
+  main .m-one .text .part-one{
+      margin: 30px 0px;
+      display: grid;
+      grid-template-columns: 12% 86%;
+      column-gap: 2%;    
+  }
+  main .m-one .text .part-one img{
+      margin: auto;
+      width: 100%;
+      border: solid red 2px;
+      border-radius: 50%;
+      -webkit-border-radius:;
+      -moz-border-radius:;
+      -ms-border-radius:;
+      -o-border-radius:;
+  }
+  main .m-one .text .part-one .personne{
+      margin-left: 7px;
+  }
+  main .m-one .text .part-one .personne h3{
+      margin-top: 5px;
+      font-size: 18px;
+  }
+  main .m-one .text .part-one .personne p{
+      margin: -17px 0px 0px;
+      font-size: 15px;
+  }
+  */
+  main .m-one .text .paraghraphe {
+    line-height: 1.3;
+    margin: 30px auto 40px;
+  }
+  main .m-one .text .read {
+    cursor: pointer;
+    width: 100%;
+    margin-top: -3px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 60% 20%;
+    column-gap: 25%;
+    color: rgb(39, 95, 199);
+  }
+  main .m-one .text .read h4 {
+    font-size: 20px;
+    margin: 0px;
+    font-weight: lighter;
+    display: inline;
+  }
+  main .m-one .text .read i {
+    margin: -14px 0px 0px;
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+    animation: arrow 1.2s linear infinite;
+    -webkit-animation: arrow 1.2s linear infinite;
+  }
+  
+  @keyframes arrow {
+    0% {
+      transform: translateX(-6px);
+      -webkit-transform: translateX(-6px);
+      -moz-transform: translateX(-6px);
+      -ms-transform: translateX(-6px);
+      -o-transform: translateX(-6px);
+    }
+    100% {
+      transform: translateX(6px);
+      -webkit-transform: translateX(6px);
+      -moz-transform: translateX(6px);
+      -ms-transform: translateX(6px);
+      -o-transform: translateX(6px);
+    }
+  }
+  
+  /**/
+  main .m-two {
+    height: 100%;
+    width: 74%;
+    margin: 50px 13%;
+    display: grid;
+    grid-template-columns: 31.5% 31.5% 31.5%;
+    column-gap: 2.75%;
+    grid-template-rows: 42.5% 42.5%;
+    row-gap: 12%;
+  }
+  
+  main .m-two > div {
+    display: grid;
+    margin-bottom: 0px;
+    background: #fff;
+    height: 340px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  main .m-two > div:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  main .m-two div .imag {
+    width: 100%;
+  }
+  main .m-two div .imag img {
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  main .m-two div h2 {
+    font-size: 18px;
+    margin: -18% 15px 0px 15px;
+    height: 50px;
+  }
+  main .m-two div .para {
+    margin: 0px auto 35px;
+    padding: 0px 15px 0px 15px;
+  }
+  /*
+  main .m-two div .part-one{
+      margin: -5px 0px 20px 0px;
+      padding: 0px 0px 20px 15px;
+      display: grid;
+      grid-template-columns: 12% 86%;
+      column-gap: 2%;
+      background: #fafafa;
+      border-radius: 6px;
+      -webkit-border-radius:;
+      -moz-border-radius:;
+      -ms-border-radius:;
+      -o-border-radius:;
+  }
+  */
+  main .m-two div .read {
+    cursor: pointer;
+    background: #fafafa;
+    width: 100%;
+    margin-top: -20px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 40% 20%;
+    column-gap: 42%;
+    color: rgb(39, 95, 199);
+  }
+  main .m-two div .read h4 {
+    padding-left: 15px;
+    margin: 0px;
+    font-weight: lighter;
+    display: inline;
+  }
+  main .m-two div .read i {
+    margin: -10px 0px 0px;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    animation: arrow 1.2s linear infinite;
+    -webkit-animation: arrow 1.2s linear infinite;
+  }
+  
+  @keyframes arrow {
+    0% {
+      transform: translateX(-6px);
+    }
+    100% {
+      transform: translateX(6px);
+     
+    }
+  }
+  
+  /*
+  main .m-two div .part-one img{
+      margin: auto;
+      width: 100%;
+      border: solid red 2px;
+      border-radius: 50%;
+      -webkit-border-radius:;
+      -moz-border-radius:;
+      -ms-border-radius:;
+      -o-border-radius:;
+  }
+  main .m-two div .part-one .personne{
+      margin: 10px 0px 0px 5px;
+      background: #fafafa; 
+  }
+  main .m-two div .part-one .personne h3{
+      font-size: 16.5px;  
+      margin-top: -6px;
+  }
+  main .m-two div .part-one .personne p{
+      margin: -17.5px 0px 0px;
+      font-size: 15px;
+  }   
+  */
+  
+  
+  /*
+  // Small devices (landscape phones, 576px and up)
+  */
+  @media only screen and (max-width: 576px) {
+    main > h1 {
+      width: 220px;
+      font-size: 1.5em;
+      margin: 25px auto;
+    }
+    main .m-one {
+      background: #fff;
+      width: 90%;
+      margin: 10px 5%;
+      grid-template-columns: 100%;
+      column-gap: 0%;
+      row-gap: 1%;
+    }
+    main .m-one .image {
+      height: 150px;
+    }
+    main .m-one .image img {
+      height: 100%;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    main .m-one .text {
+      margin: -5px 15px 20px 15px;
+    }
+    main .m-one .text h2 {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    main .m-one .text .paraghraphe {
+      line-height: 1.3;
+      font-size: 13px;
+    }
+    main .m-one .text .read {
+      grid-template-columns: 50% 15%;
+      column-gap: 30%;
+    }
+    main .m-two {
+      height: 100%;
+      width: 98%;
+      margin: 20px 1% 5px;
+      grid-template-columns: repeat(2, 48%);
+      column-gap: 4%;
+      grid-template-rows: 30% 30% 30%;
+      row-gap: 6%;
+    }
+    main .m-two > div {
+      display: grid;
+      margin-bottom: 0px;
+      height: 210px;
+      height: 280px;
+    }
+    main .m-two div .para {
+      margin: 0px auto 15px;
+      padding: 0px 7px 0px 7px;
+      font-size: 13px;
+    }
+    main .m-two div .imag img {
+      height: 80%;
+    }
+    main .m-two div h2 {
+      font-size: 14px;
+      margin: -11% 2px 0px;
+      height: 50px;
+      text-align: center;
+    }
+    main .m-two div .read {
+      margin-top: -10px;
+      height: 25px;
+      grid-template-columns: 70% 10%;
+      column-gap: 4%;
+    }
+    main .m-two div .read h4 {
+      padding-left: 7px;
+      margin: 0px;
+      font-size: 13px;
+    }
+  }
+  /*
+  // Medium devices (tablets, 768px and up)
+  */
+  @media (min-width: 577px) and (max-width: 768px) {
+    main > h1 {
+      width: 220px;
+      font-size: 1.5em;
+      margin: 25px auto;
+    }
+    main .m-one {
+      background: #fff;
+      width: 90%;
+      margin: 10px 5%;
+      grid-template-columns: 100%;
+      column-gap: 0%;
+      row-gap: 1%;
+    }
+    main .m-one .image {
+      height: 180px;
+    }
+    main .m-one .image img {
+      height: 100%;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    main .m-one .text {
+      margin: 5px 15px 20px 15px;
+    }
+    main .m-one .text h2 {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    main .m-one .text .paraghraphe {
+      line-height: 1.3;
+      font-size: 13px;
+    }
+    main .m-one .text .read {
+      grid-template-columns: 50% 15%;
+      column-gap: 30%;
+    }
+    main .m-two {
+      height: 100%;
+      width: 98%;
+      margin: 20px 1% 5px;
+      grid-template-columns: repeat(2, 48%);
+      column-gap: 4%;
+      grid-template-rows: 30% 30% 30%;
+      row-gap: 6%;
+    }
+    main .m-two > div {
+      display: grid;
+      margin-bottom: 0px;
+      height: 330px;
+    }
+    main .m-two div .para {
+      margin: -15px auto 15px;
+      padding: 0px 7px 0px 7px;
+      font-size: 13px;
+    }
+    main .m-two div .imag img {
+      height: 80%;
+    }
+    main .m-two div h2 {
+      font-size: 14px;
+      margin: -11% 2px 0px;
+      height: 50px;
+      text-align: center;
+    }
+    main .m-two div .read {
+      margin-top: -10px;
+      height: 25px;
+      grid-template-columns: 70% 10%;
+      column-gap: 4%;
+    }
+    main .m-two div .read h4 {
+      padding-left: 7px;
+      margin: 0px;
+      font-size: 13px;
+    }
+  }
+  
+  /*
+  // Large devices (desktops, 992px and up)
+  1200px
+  */
+  @media (min-width: 769px) and (max-width: 1050px) {
+    main > h1 {
+      width: 220px;
+      font-size: 1.5em;
+      margin: 25px auto;
+    }
+    main .m-one {
+      background: #fff;
+      width: 90%;
+      margin: 10px 5%;
+      grid-template-columns: 100%;
+      column-gap: 0%;
+      row-gap: 1%;
+    }
+    main .m-one .image {
+      height: 180px;
+    }
+    main .m-one .image img {
+      height: 100%;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    main .m-one .text {
+      margin: 5px 15px 20px 15px;
+    }
+    main .m-one .text h2 {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    main .m-one .text .paraghraphe {
+      line-height: 1.3;
+      font-size: 13px;
+      text-align: center;
+    }
+    main .m-one .text .read {
+      grid-template-columns: 50% 15%;
+      column-gap: 35%;
+    }
+    main .m-two {
+      height: 100%;
+      width: 98%;
+      margin: 20px 1% 5px;
+      grid-template-columns: repeat(2, 48%);
+      column-gap: 4%;
+      grid-template-rows: 30% 30% 30%;
+      row-gap: 6%;
+    }
+    main .m-two > div {
+      display: grid;
+      margin-bottom: 0px;
+      height: 380px;
+    }
+    main .m-two div .imag img {
+      height: 70%;
+    }
+    main .m-two div h2 {
+      font-size: 14px;
+      margin: -18% 2px 0px;
+      height: 50px;
+      text-align: center;
+    }
+    main .m-two div .para {
+      margin: -40px auto 15px;
+      padding: 0px 7px 0px 7px;
+      font-size: 13px;
+      text-align: center;
+    }
+    main .m-two div .read {
+      margin-top: -10px;
+      height: 25px;
+      grid-template-columns: 70% 10%;
+      column-gap: 15%;
+    }
+    main .m-two div .read h4 {
+      padding-left: 15px;
+      margin: 0px;
+      font-size: 13px;
+    }
+  }
+  
+  /*
+  // XX-Large devices (larger desktops, 1400px and up)
+  */
+  @media (min-width: 1051px) and (max-width: 1200px) {
+    main > h1 {
+      width: 220px;
+      font-size: 1.5em;
+      margin: 25px auto;
+    }
+    main .m-one {
+      background: #fff;
+      width: 90%;
+      margin: 10px 5%;
+      grid-template-columns: 100%;
+      column-gap: 0%;
+      row-gap: 1%;
+    }
+    main .m-one .image {
+      height: 180px;
+    }
+    main .m-one .image img {
+      height: 100%;
+      border-radius: 0px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+  }
+    main .m-one .text {
+      margin: 5px 15px 20px 15px;
+    }
+    main .m-one .text h2 {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    main .m-one .text .paraghraphe {
+      line-height: 1.3;
+      font-size: 13px;
+      text-align: center;
+    }
+    main .m-one .text .read {
+      grid-template-columns: 50% 15%;
+      column-gap: 35%;
+    }
+    main .m-two {
+      height: 100%;
+      width: 98%;
+      margin: 20px 1% 5px;
+      grid-template-columns: repeat(2, 48%);
+      column-gap: 4%;
+      grid-template-rows: 30% 30% 30%;
+      row-gap: 6%;
+    }
+    main .m-two > div {
+      display: grid;
+      margin-bottom: 0px;
+      height: 380px;
+    }
+    main .m-two div .imag img {
+      height: 70%;
+    }
+    main .m-two div h2 {
+      font-size: 14px;
+      margin: -20% 2px 0px;
+      height: 50px;
+      text-align: center;
+    }
+    main .m-two div .para {
+      margin: -65px auto 15px;
+      padding: 0px 7px 0px 7px;
+      font-size: 13px;
+      text-align: center;
+    }
+    main .m-two div .read {
+      margin-top: -30px;
+      height: 25px;
+      grid-template-columns: 70% 10%;
+      column-gap: 15%;
+    }
+    main .m-two div .read h4 {
+      padding-left: 15px;
+      margin: 0px;
+      font-size: 13px;
+    }
+  }
+  
+.footer{
+    margin-top: 120px;
+    width: 100%;
+    min-height: 45vh;
+    background-color: #0e2c5bfb;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blob{
+    position: absolute;
+    width: 200px;
+    top: -10px;
+    left: 34px;
+}
+.logo-footer{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 170px;
+    border-radius: 15px;
+}
+.subfooter{
+    position: absolute;
+    width: 70%;
+    height: 100px;
+    top: 30%;
+    left:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subfooter>div{
+    flex: 1;
+}
+.call-footer{
+    width: 50%;
+    text-align: center;
+    color: rgb(233, 227, 227);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.mail-footer{
+    width: 60%;
+    text-align: center;
+    color: rgb(233, 227, 227);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.location-footer{
+    width: 100%;
+    text-align: center;
+    color: rgb(233, 227, 227);
+    display: flex;
+    justify-content: space-evenly;
+}
+.line{
+    position: absolute;
+    width: 90%;
+    bottom: 50px;
+    left: 5%;
+    background-color: rgb(148, 148, 148);
+}
+.footer-sociaux{
+    position: absolute;
+    width: 85%;
+    height: 30px;
+    bottom: 10px;
+    left: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-nav{
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav a{
+    text-decoration: none;
+    color: rgb(216, 210, 210);
+}
+.footer-nav a:hover{
+    color: rgb(39, 95, 199) ;
+    transition: 0.3s linear;
+}
+.footer-fb{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+.footer-fb i{
+    font-size: 1.3em;
+    color: white;
+    cursor: pointer;
+}
+.footer-sociaux h5{
+    color:rgb(216, 210, 210);
+}
+.footer-fb i:nth-child(1):hover{
+    color: blue;
+    transition: 0.3s linear;
+}
+.footer-fb i:nth-child(2):hover{
+    color: red;
+    transition: 0.3s linear;
+}
+.footer-fb i:nth-child(3):hover{
+    color: rgb(223, 62, 188);
+    transition: 0.3s linear;
+}
+@media(max-width:750px) {
+    .blob,.logo-footer{
+        display: none;
+    }
+    .footer{
+        min-height: 380px;
+    }
+    .subfooter{
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        height: 60%;
+        flex-direction: column;
+    }
+    .call-footer{
+        justify-content: space-between;
+    }
+    .footer-nav{
+        display: none;
+    }
+    .line{
+        bottom: 16%;
+    }
+    .footer-sociaux{
+        height: 12%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer-fb{
+        margin-right: 0;
+    }
+}
+@media screen and (min-width:751px) and (max-width:990px) {
+    .footer{
+        min-height: 250px;
+    }
+    .blob{
+        width: 170px;
+        top: 0;
+        left: 5px;
+    }
+    .logo-footer{
+        position: absolute;
+        width: 150px;
+        left: 15px;
+    }
+    .subfooter{
+        width: 78%;
+    }
+    .footer-sociaux{
+        width: 90%;
+        left: 5%;
+    }
+    .footer-nav{
+        width: 40%;
+    }
+    .footer-nav a{
+        font-size: .8em;
+    }
+    .footer-fb{
+        margin-right: 0;
+    }
+}
+@media screen and (min-width:991px) and (max-width:1334px) {
+    .footer{
+        min-height: 300px;
+    }
+    #svg{
+        left: -1%;
+    }
+}
